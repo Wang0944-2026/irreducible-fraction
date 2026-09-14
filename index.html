@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>認識最簡分數</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -117,90 +117,21 @@
             100% { left: 100%; }
         }
         
-        .streak-3 {
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-            border: 2px solid rgba(255, 215, 0, 0.5);
-            background-color: rgba(255, 215, 0, 0.05);
-        }
+        .streak-3 { box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); border: 2px solid rgba(255, 215, 0, 0.5); background-color: rgba(255, 215, 0, 0.05); }
+        .streak-5 { box-shadow: 0 0 18px rgba(255, 140, 0, 0.4); border: 2px solid rgba(255, 140, 0, 0.6); background-color: rgba(255, 140, 0, 0.08); animation: streakPulse 0.8s ease-in-out infinite alternate; }
+        .streak-7 { box-shadow: 0 0 20px rgba(147, 51, 234, 0.4); border: 2px solid rgba(147, 51, 234, 0.6); background-color: rgba(147, 51, 234, 0.08); animation: streakPurple 0.7s ease-in-out infinite alternate; }
+        .streak-10 { box-shadow: 0 0 22px rgba(239, 68, 68, 0.4); border: 2px solid rgba(239, 68, 68, 0.6); background-color: rgba(239, 68, 68, 0.08); animation: streakIntense 0.6s ease-in-out infinite alternate; }
+        .streak-15 { box-shadow: 0 0 25px rgba(236, 72, 153, 0.4); border: 3px solid rgba(236, 72, 153, 0.6); background-color: rgba(236, 72, 153, 0.08); animation: streakMagenta 0.5s ease-in-out infinite alternate; }
+        .streak-20 { box-shadow: 0 0 28px rgba(59, 130, 246, 0.4); border: 3px solid rgba(59, 130, 246, 0.6); background-color: rgba(59, 130, 246, 0.08); animation: streakBlue 0.4s ease-in-out infinite alternate; }
+        .streak-25 { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(236, 72, 153, 0.3); border: 3px solid transparent; background: linear-gradient(white, white) padding-box, linear-gradient(45deg, rgba(168, 85, 247, 0.6), rgba(236, 72, 153, 0.6), rgba(59, 130, 246, 0.6)) border-box; animation: streakLegendary 0.3s ease-in-out infinite alternate, rainbowBorder 3s ease-in-out infinite; }
         
-        .streak-5 {
-            box-shadow: 0 0 18px rgba(255, 140, 0, 0.4);
-            border: 2px solid rgba(255, 140, 0, 0.6);
-            background-color: rgba(255, 140, 0, 0.08);
-            animation: streakPulse 0.8s ease-in-out infinite alternate;
-        }
-        
-        .streak-7 {
-            box-shadow: 0 0 20px rgba(147, 51, 234, 0.4);
-            border: 2px solid rgba(147, 51, 234, 0.6);
-            background-color: rgba(147, 51, 234, 0.08);
-            animation: streakPurple 0.7s ease-in-out infinite alternate;
-        }
-        
-        .streak-10 {
-            box-shadow: 0 0 22px rgba(239, 68, 68, 0.4);
-            border: 2px solid rgba(239, 68, 68, 0.6);
-            background-color: rgba(239, 68, 68, 0.08);
-            animation: streakIntense 0.6s ease-in-out infinite alternate;
-        }
-        
-        .streak-15 {
-            box-shadow: 0 0 25px rgba(236, 72, 153, 0.4);
-            border: 3px solid rgba(236, 72, 153, 0.6);
-            background-color: rgba(236, 72, 153, 0.08);
-            animation: streakMagenta 0.5s ease-in-out infinite alternate;
-        }
-        
-        .streak-20 {
-            box-shadow: 0 0 28px rgba(59, 130, 246, 0.4);
-            border: 3px solid rgba(59, 130, 246, 0.6);
-            background-color: rgba(59, 130, 246, 0.08);
-            animation: streakBlue 0.4s ease-in-out infinite alternate;
-        }
-        
-        .streak-25 {
-            box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(236, 72, 153, 0.3);
-            border: 3px solid transparent;
-            background: linear-gradient(white, white) padding-box, 
-                        linear-gradient(45deg, rgba(168, 85, 247, 0.6), rgba(236, 72, 153, 0.6), rgba(59, 130, 246, 0.6)) border-box;
-            animation: streakLegendary 0.3s ease-in-out infinite alternate, rainbowBorder 3s ease-in-out infinite;
-        }
-        
-        @keyframes streakPulse {
-            0% { box-shadow: 0 0 18px rgba(255, 140, 0, 0.4); }
-            100% { box-shadow: 0 0 22px rgba(255, 140, 0, 0.5); }
-        }
-        
-        @keyframes streakPurple {
-            0% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.4); }
-            100% { box-shadow: 0 0 25px rgba(147, 51, 234, 0.5); }
-        }
-        
-        @keyframes streakIntense {
-            0% { box-shadow: 0 0 22px rgba(239, 68, 68, 0.4); }
-            100% { box-shadow: 0 0 28px rgba(239, 68, 68, 0.5); }
-        }
-        
-        @keyframes streakMagenta {
-            0% { box-shadow: 0 0 25px rgba(236, 72, 153, 0.4); }
-            100% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.5); }
-        }
-        
-        @keyframes streakBlue {
-            0% { box-shadow: 0 0 28px rgba(59, 130, 246, 0.4); }
-            100% { box-shadow: 0 0 35px rgba(59, 130, 246, 0.5); }
-        }
-        
-        @keyframes streakLegendary {
-            0% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(236, 72, 153, 0.3); }
-            100% { box-shadow: 0 0 35px rgba(168, 85, 247, 0.6), 0 0 60px rgba(236, 72, 153, 0.4); }
-        }
-        
-        @keyframes rainbowBorder {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+        @keyframes streakPulse { 0% { box-shadow: 0 0 18px rgba(255, 140, 0, 0.4); } 100% { box-shadow: 0 0 22px rgba(255, 140, 0, 0.5); } }
+        @keyframes streakPurple { 0% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.4); } 100% { box-shadow: 0 0 25px rgba(147, 51, 234, 0.5); } }
+        @keyframes streakIntense { 0% { box-shadow: 0 0 22px rgba(239, 68, 68, 0.4); } 100% { box-shadow: 0 0 28px rgba(239, 68, 68, 0.5); } }
+        @keyframes streakMagenta { 0% { box-shadow: 0 0 25px rgba(236, 72, 153, 0.4); } 100% { box-shadow: 0 0 30px rgba(236, 72, 153, 0.5); } }
+        @keyframes streakBlue { 0% { box-shadow: 0 0 28px rgba(59, 130, 246, 0.4); } 100% { box-shadow: 0 0 35px rgba(59, 130, 246, 0.5); } }
+        @keyframes streakLegendary { 0% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5), 0 0 50px rgba(236, 72, 153, 0.3); } 100% { box-shadow: 0 0 35px rgba(168, 85, 247, 0.6), 0 0 60px rgba(236, 72, 153, 0.4); } }
+        @keyframes rainbowBorder { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         
         .streak-message {
             position: absolute;
@@ -212,82 +143,72 @@
         }
         
         @keyframes streakMessageShow {
-            0% { 
-                opacity: 0; 
-                transform: translate(-50%, -50%) scale(0.5);
-            }
-            20% { 
-                opacity: 1; 
-                transform: translate(-50%, -50%) scale(1.2);
-            }
-            80% { 
-                opacity: 1; 
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% { 
-                opacity: 0; 
-                transform: translate(-50%, -50%) scale(0.8);
-            }
+            0% { opacity: 0; transform: translate(-50%, -50%) scale(0.5); }
+            20% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+            80% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
-    <!-- Header -->
-    <header class="bg-white shadow-sm p-4">
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex flex-col">
+    <!-- Header (Responsive) -->
+    <header class="bg-white shadow-sm p-3 md:p-4 shrink-0">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-2xl md:text-3xl font-bold text-center text-indigo-800 mb-4">認識最簡分數</h1>
+            <h1 class="text-xl md:text-3xl font-bold text-center text-indigo-800 mb-3 md:mb-4">認識最簡分數</h1>
             
-            <div class="flex flex-wrap justify-center gap-4 items-center">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-2 md:gap-4 items-center">
                 <!-- Mode Toggle -->
-                <div class="flex bg-gray-100 rounded-lg p-1">
-                    <button id="judgeMode" class="px-4 py-2 rounded-md text-sm font-medium transition-colors bg-indigo-600 text-white">
+                <div class="flex bg-gray-100 rounded-lg p-1 w-full sm:w-auto justify-center">
+                    <button id="judgeMode" class="flex-1 sm:flex-none px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors bg-indigo-600 text-white min-h-[44px]">
                         判斷題
                     </button>
-                    <button id="simplifyMode" class="px-4 py-2 rounded-md text-sm font-medium transition-colors text-gray-600 hover:text-gray-800">
+                    <button id="simplifyMode" class="flex-1 sm:flex-none px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors text-gray-600 hover:text-gray-800 min-h-[44px]">
                         化簡題
                     </button>
                 </div>
                 
-                <!-- Difficulty -->
-                <select id="difficulty" class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                    <option value="easy">入門 (分母≤20)</option>
-                    <option value="medium">進階 (分母≤50)</option>
-                    <option value="hard">挑戰 (分母≤100)</option>
-                </select>
-                
-                <!-- Time Selector -->
-                <select id="timeLimit" class="px-3 py-2 border border-gray-300 rounded-md text-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                    <option value="1">1分鐘</option>
-                    <option value="2">2分鐘</option>
-                    <option value="3">3分鐘</option>
-                    <option value="5">5分鐘</option>
-                    <option value="10">10分鐘</option>
-                </select>
+                <div class="flex w-full sm:w-auto gap-2">
+                    <!-- Difficulty -->
+                    <select id="difficulty" class="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 min-h-[44px]">
+                        <option value="easy">入門 (分母≤20)</option>
+                        <option value="medium">進階 (分母≤50)</option>
+                        <option value="hard">挑戰 (分母≤100)</option>
+                    </select>
+                    
+                    <!-- Time Selector -->
+                    <select id="timeLimit" class="flex-1 px-3 py-2 border border-gray-300 rounded-md text-sm md:text-base focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 min-h-[44px]">
+                        <option value="1">1分鐘</option>
+                        <option value="2">2分鐘</option>
+                        <option value="3">3分鐘</option>
+                        <option value="5">5分鐘</option>
+                        <option value="10">10分鐘</option>
+                    </select>
+                </div>
                 
                 <!-- Start Button -->
-                <button id="startBtn" class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors">
+                <button id="startBtn" class="w-full sm:w-auto px-6 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors min-h-[44px] shadow-sm">
                     確認模式
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- Game Area -->
-    <main class="max-w-4xl mx-auto p-4">
+    <!-- Game Area (Responsive) -->
+    <main class="flex-grow w-full max-w-4xl mx-auto p-3 md:p-4">
         <!-- Game Rules -->
         <div id="gameRules" class="hidden mb-6">
-            <div class="bg-white rounded-xl shadow-lg p-6">
-                <h2 class="text-2xl font-bold text-center mb-4 text-indigo-800">遊戲規則</h2>
+            <div class="bg-white rounded-xl shadow-lg p-5 md:p-6">
+                <h2 class="text-xl md:text-2xl font-bold text-center mb-4 text-indigo-800">遊戲規則</h2>
                 
                 <!-- Judge Mode Rules -->
                 <div id="judgeRules" class="hidden">
                     <div class="space-y-4 text-gray-700">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h3 class="font-semibold text-lg mb-2 text-blue-800">📋 判斷題模式</h3>
-                            <p class="mb-2">判斷給定的分數是否已經是『最簡分數』。</p>
+                            <h3 class="font-semibold text-base md:text-lg mb-2 text-blue-800">📋 判斷題模式</h3>
+                            <p class="mb-2 text-sm md:text-base">判斷給定的分數是否已經是『最簡分數』。</p>
                         </div>
                         
-                        <div class="grid md:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div class="bg-green-50 p-4 rounded-lg">
                                 <h4 class="font-semibold text-green-800 mb-2">✅ 什麼是最簡分數？</h4>
                                 <ul class="text-sm space-y-1">
@@ -309,17 +230,17 @@
                         
                         <div class="bg-yellow-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-yellow-800 mb-2">🎮 操作方式</h4>
-                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                                 <div>
                                     <p class="font-medium">滑鼠操作：</p>
-                                    <ul class="space-y-1">
+                                    <ul class="space-y-1 text-gray-600">
                                         <li>• 點擊「是」按鈕：認為是最簡分數</li>
                                         <li>• 點擊「不是」按鈕：認為不是最簡分數</li>
                                     </ul>
                                 </div>
                                 <div>
                                     <p class="font-medium">鍵盤快捷鍵：</p>
-                                    <ul class="space-y-1">
+                                    <ul class="space-y-1 text-gray-600">
                                         <li>• J 鍵或 ← 鍵：選擇「是」</li>
                                         <li>• F 鍵或 → 鍵：選擇「不是」</li>
                                     </ul>
@@ -333,13 +254,13 @@
                 <div id="simplifyRules" class="hidden">
                     <div class="space-y-4 text-gray-700">
                         <div class="bg-purple-50 p-4 rounded-lg">
-                            <h3 class="font-semibold text-lg mb-2 text-purple-800">✏️ 化簡題模式</h3>
-                            <p class="mb-2">將給定的分數化簡為『最簡分數』。</p>
+                            <h3 class="font-semibold text-base md:text-lg mb-2 text-purple-800">✏️ 化簡題模式</h3>
+                            <p class="mb-2 text-sm md:text-base">將給定的分數化簡為『最簡分數』。</p>
                         </div>
                         
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-blue-800 mb-2">🔢 化簡步驟</h4>
-                            <ol class="text-sm space-y-1 list-decimal list-inside">
+                            <ol class="text-sm space-y-1 list-decimal list-inside text-gray-600">
                                 <li>找出分子和分母的最大公因數。</li>
                                 <li>將分子和分母同時除以最大公因數。</li>
                                 <li>得到最簡分數。</li>
@@ -351,23 +272,16 @@
                         
                         <div class="bg-green-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-green-800 mb-2">🎮 操作方式</h4>
-                            <div class="text-sm space-y-2">
+                            <div class="text-sm space-y-2 text-gray-600">
                                 <p><strong>拖拉操作：</strong></p>
                                 <ul class="space-y-1 ml-4">
                                     <li>• 從下方數字區拖拉數字到答案框</li>
                                     <li>• 上方框填入化簡後的分子</li>
                                     <li>• 下方框填入化簡後的分母</li>
                                 </ul>
-                                <p><strong>修改答案：</strong></p>
-                                <ul class="space-y-1 ml-4">
-                                    <li>• 點擊已填入的答案框可清除內容</li>
-                                    <li>• 重新拖拉正確的數字</li>
-                                </ul>
                                 <p><strong>跳過題目：</strong></p>
                                 <ul class="space-y-1 ml-4">
                                     <li>• 點擊「跳過此題」按鈕（扣3分）</li>
-                                    <li>• 或按 Enter 鍵快速跳過</li>
-                                    <li>• 兩個答案框都填入後會自動提交</li>
                                 </ul>
                             </div>
                         </div>
@@ -376,28 +290,22 @@
                 
                 <!-- Common Rules -->
                 <div class="bg-gray-50 p-4 rounded-lg mt-4">
-                    <h4 class="font-semibold text-gray-800 mb-2">⚡ 計分規則</h4>
-                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                    <h4 class="font-semibold text-gray-800 mb-2">⚡ 計分規則 (防護機制)</h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
                         <div>
                             <ul class="space-y-1">
-                                <li>• 答對一題：+1 分</li>
+                                <li>• 答對一題：+1 分 (0.5秒極速換題)</li>
                                 <li>• 連續答對 3 題以上：每題額外 +1 分</li>
-                                <li><strong class="text-red-600">• 答錯：扣 1 分，連擊歸零並強制鎖定 2 秒</strong></li>
-                                <li>• 跳過題目：-3 分，連擊歸零</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="space-y-1">
-                                <li>• 時間結束後顯示成績</li>
-                                <li>• 記錄正確率和平均作答時間</li>
-                                <li>• 追蹤最高連擊紀錄</li>
+                                <li><strong class="text-red-600">• 答錯：扣 1 分，強制鎖定 2 秒並中斷連擊</strong></li>
+                                <li><strong class="text-red-600">• 防狂點：連猜4次同選項將觸發紅牌警告</strong></li>
+                                <li>• 跳過題目：扣 3 分，中斷連擊</li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 
                 <div class="text-center mt-6">
-                    <button id="startGameFromRules" class="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+                    <button id="startGameFromRules" class="w-full sm:w-auto px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-md">
                         開始遊戲
                     </button>
                 </div>
@@ -405,21 +313,21 @@
         </div>
         
         <!-- HUD -->
-        <div id="hud" class="hidden mb-6">
-            <div class="bg-white rounded-lg shadow-md p-4">
-                <div class="flex justify-between items-center mb-2">
-                    <div class="text-lg font-semibold">
+        <div id="hud" class="hidden mb-4 md:mb-6">
+            <div class="bg-white rounded-lg shadow-md p-3 md:p-4">
+                <div class="flex flex-wrap justify-between items-center mb-2 text-sm md:text-lg">
+                    <div class="font-semibold">
                         分數: <span id="scoreDisplay" class="text-indigo-600">0</span>
                     </div>
-                    <div class="text-lg font-semibold">
+                    <div class="font-semibold">
                         連擊: <span id="streakDisplay" class="text-orange-600 font-medium">0</span>
                     </div>
-                    <div class="text-lg font-semibold">
+                    <div class="font-semibold">
                         時間: <span id="timeDisplay" class="text-red-600">60</span>s
                     </div>
                 </div>
                 <div class="flex justify-center items-center mb-2">
-                    <div class="text-sm">
+                    <div class="text-xs md:text-sm">
                         題數: <span id="questionCount" class="text-gray-600">0</span>
                     </div>
                 </div>
@@ -431,71 +339,71 @@
 
         <!-- Question Card -->
         <div id="questionCard" class="hidden">
-            <div class="bg-white rounded-xl shadow-lg p-8 text-center transition-colors duration-200">
+            <div class="bg-white rounded-xl shadow-lg p-5 md:p-8 text-center transition-colors duration-200">
                 <!-- Question Instruction -->
-                <div id="questionInstruction" class="mb-6">
-                    <div class="text-lg md:text-xl text-gray-700 font-medium">請判斷以下分數是否為最簡分數？</div>
+                <div id="questionInstruction" class="mb-4 md:mb-6">
+                    <div class="text-base md:text-xl text-gray-700 font-medium">請判斷以下分數是否為最簡分數？</div>
                 </div>
 
                 <!-- Fraction Display for Judge Mode -->
-                <div id="judgeFraction" class="mb-8">
-                    <div class="text-6xl md:text-8xl font-bold text-gray-800 mb-2">
+                <div id="judgeFraction" class="mb-6 md:mb-8">
+                    <div class="text-7xl md:text-8xl font-bold text-gray-800 mb-2">
                         <span id="numerator">3</span>
                     </div>
-                    <div class="border-t-4 border-gray-800 mx-auto mb-2" style="width: 120px;"></div>
-                    <div class="text-6xl md:text-8xl font-bold text-gray-800">
+                    <div class="border-t-4 border-gray-800 mx-auto mb-2 w-24 md:w-32"></div>
+                    <div class="text-7xl md:text-8xl font-bold text-gray-800">
                         <span id="denominator">4</span>
                     </div>
                 </div>
 
                 <!-- Judge Mode Buttons -->
-                <div id="judgeButtons" class="flex space-x-4">
-                    <button id="isSimplestBtn" class="flex-1 py-4 px-6 bg-green-600 hover:bg-green-700 text-white text-xl font-semibold rounded-lg transition-colors min-h-[60px]">
+                <div id="judgeButtons" class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button id="isSimplestBtn" class="flex-1 py-4 px-6 bg-green-600 hover:bg-green-700 text-white text-xl font-semibold rounded-lg transition-colors min-h-[60px] shadow-sm">
                         是
                     </button>
-                    <button id="notSimplestBtn" class="flex-1 py-4 px-6 bg-red-600 hover:bg-red-700 text-white text-xl font-semibold rounded-lg transition-colors min-h-[60px]">
+                    <button id="notSimplestBtn" class="flex-1 py-4 px-6 bg-red-600 hover:bg-red-700 text-white text-xl font-semibold rounded-lg transition-colors min-h-[60px] shadow-sm">
                         不是
                     </button>
                 </div>
 
                 <!-- Simplify Mode Input -->
-                <div id="simplifyInput" class="hidden space-y-6">
-                    <div class="text-lg text-gray-600 mb-4">請將下列分數化為最簡分數：</div>
+                <div id="simplifyInput" class="hidden space-y-4 md:space-y-6">
+                    <div class="text-base md:text-lg text-gray-600 mb-2 md:mb-4">請將下列分數化為最簡分數：</div>
                     
                     <!-- Fraction with Answer -->
-                    <div class="flex justify-center items-center space-x-6 mb-6">
+                    <div class="flex justify-center items-center space-x-3 md:space-x-6 mb-4 md:mb-6">
                         <!-- Original Fraction -->
                         <div class="text-center">
                             <div class="text-4xl md:text-6xl font-bold text-gray-800 mb-1">
                                 <span id="simplifyNumerator">6</span>
                             </div>
-                            <div class="border-t-4 border-gray-800 mx-auto mb-1" style="width: 80px;"></div>
+                            <div class="border-t-[3px] md:border-t-4 border-gray-800 mx-auto mb-1 w-16 md:w-20"></div>
                             <div class="text-4xl md:text-6xl font-bold text-gray-800">
                                 <span id="simplifyDenominator">8</span>
                             </div>
                         </div>
                         
                         <!-- Equals Sign -->
-                        <div class="text-4xl md:text-6xl font-bold text-gray-600">=</div>
+                        <div class="text-3xl md:text-6xl font-bold text-gray-600">=</div>
                         
                         <!-- Answer Boxes -->
                         <div class="text-center">
-                            <div id="dropNumerator" class="w-20 h-12 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mb-1 mx-auto">
+                            <div id="dropNumerator" class="w-16 h-10 md:w-20 md:h-14 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-xl md:text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mb-1 mx-auto">
                                 ?
                             </div>
-                            <div class="border-t-4 border-gray-800 mx-auto mb-1" style="width: 80px;"></div>
-                            <div id="dropDenominator" class="w-20 h-12 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mx-auto">
+                            <div class="border-t-[3px] md:border-t-4 border-gray-800 mx-auto mb-1 w-16 md:w-20"></div>
+                            <div id="dropDenominator" class="w-16 h-10 md:w-20 md:h-14 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-xl md:text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mx-auto">
                                 ?
                             </div>
                         </div>
                     </div>
                     
                     <!-- Draggable Numbers -->
-                    <div id="draggableNumbers" class="grid grid-cols-5 gap-2 mb-6">
+                    <div id="draggableNumbers" class="grid grid-cols-5 gap-2 md:gap-3 mb-4 md:mb-6">
                         <!-- Numbers will be dynamically generated -->
                     </div>
                     
-                    <button id="submitBtn" class="w-full py-4 px-6 bg-gray-600 hover:bg-gray-700 text-white text-xl font-semibold rounded-lg transition-colors min-h-[60px]">
+                    <button id="submitBtn" class="w-full py-3 md:py-4 px-6 bg-gray-600 hover:bg-gray-700 text-white text-lg md:text-xl font-semibold rounded-lg transition-colors min-h-[50px] shadow-sm">
                         跳過此題
                     </button>
                 </div>
@@ -504,73 +412,78 @@
 
     </main>
 
-    <!-- Results Modal -->
-    <div id="resultsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 modal-backdrop flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-xl shadow-2xl max-w-6xl w-full p-6">
-            <h2 class="text-2xl font-bold text-center mb-6 text-indigo-800">遊戲結束！</h2>
+    <!-- 全域 Footer (Version Number) -->
+    <footer class="text-center py-4 text-gray-500 text-xs md:text-sm font-medium mt-auto w-full shrink-0">
+        大榮老師製作 &copy; 2026 | Version 2.5 (v 2.5)
+    </footer>
+
+    <!-- Results Modal (Responsive) -->
+    <div id="resultsModal" class="hidden fixed inset-0 bg-black bg-opacity-50 modal-backdrop flex items-center justify-center p-3 md:p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-6xl p-4 md:p-6 my-auto">
+            <h2 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-indigo-800">遊戲結束！</h2>
             
-            <div class="text-center mb-6 p-3 bg-gray-50 rounded-lg">
-                <span id="gameMode" class="text-sm text-gray-600 font-medium">判斷題 / 入門(分母≤20) / 1分鐘</span>
-                <div id="motivationalMessage" class="text-sm font-medium mt-2 px-2 py-1 rounded"></div>
+            <div class="text-center mb-4 md:mb-6 p-2 md:p-3 bg-gray-50 rounded-lg">
+                <span id="gameMode" class="text-xs md:text-sm text-gray-600 font-medium">判斷題 / 入門(分母≤20) / 1分鐘</span>
+                <div id="motivationalMessage" class="text-xs md:text-sm font-medium mt-2 px-2 py-1 rounded inline-block"></div>
             </div>
             
             <!-- Main Content Area -->
-            <div class="flex flex-col md:flex-row gap-6 mb-6">
-                <!-- Left Side - Stats -->
-                <div class="w-full md:w-1/4 bg-blue-50 rounded-lg p-4">
-                    <h3 class="text-lg font-semibold text-blue-800 mb-4 text-center">成績統計</h3>
-                    <div class="space-y-3">
-                        <div class="bg-white rounded-lg p-3 shadow-sm">
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6 mb-4 md:mb-6">
+                <!-- Top/Left Side - Stats -->
+                <div class="w-full md:w-1/3 bg-blue-50 rounded-lg p-3 md:p-4 shrink-0">
+                    <h3 class="text-base md:text-lg font-semibold text-blue-800 mb-3 md:mb-4 text-center">成績統計</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-1 gap-2 md:gap-3">
+                        <div class="bg-white rounded-lg p-2 md:p-3 shadow-sm">
                             <div class="text-center">
-                                <div class="text-2xl font-bold text-indigo-600" id="finalScore">0</div>
-                                <div class="text-sm text-gray-600">總分</div>
+                                <div class="text-xl md:text-2xl font-bold text-indigo-600" id="finalScore">0</div>
+                                <div class="text-xs md:text-sm text-gray-600">總分</div>
                             </div>
                         </div>
-                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                        <div class="bg-white rounded-lg p-2 md:p-3 shadow-sm">
                             <div class="text-center">
-                                <div class="text-xl font-bold text-gray-800" id="totalQuestions">0/0</div>
-                                <div class="text-sm text-gray-600">答對數/答題數</div>
+                                <div class="text-lg md:text-xl font-bold text-gray-800" id="totalQuestions">0/0</div>
+                                <div class="text-xs md:text-sm text-gray-600">答對數/答題數</div>
                             </div>
                         </div>
-                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                        <div class="bg-white rounded-lg p-2 md:p-3 shadow-sm">
                             <div class="text-center">
-                                <div class="text-xl font-bold text-green-600" id="accuracy">0%</div>
-                                <div class="text-sm text-gray-600">正確率</div>
+                                <div class="text-lg md:text-xl font-bold text-green-600" id="accuracy">0%</div>
+                                <div class="text-xs md:text-sm text-gray-600">正確率</div>
                             </div>
                         </div>
-                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                        <div class="bg-white rounded-lg p-2 md:p-3 shadow-sm">
                             <div class="text-center">
-                                <div class="text-xl font-bold text-blue-600" id="avgTime">0s</div>
-                                <div class="text-sm text-gray-600">平均作答時間</div>
+                                <div class="text-lg md:text-xl font-bold text-blue-600" id="avgTime">0s</div>
+                                <div class="text-xs md:text-sm text-gray-600">平均作答時間</div>
                             </div>
                         </div>
-                        <div class="bg-white rounded-lg p-3 shadow-sm">
+                        <div class="bg-white rounded-lg p-2 md:p-3 shadow-sm col-span-2 md:col-span-1">
                             <div class="text-center">
-                                <div class="text-xl font-bold text-orange-600" id="maxStreak">0</div>
-                                <div class="text-sm text-gray-600">最高連擊</div>
+                                <div class="text-lg md:text-xl font-bold text-orange-600" id="maxStreak">0</div>
+                                <div class="text-xs md:text-sm text-gray-600">最高連擊</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right Side - Wrong Answers Review -->
-                <div class="w-full md:w-3/4 bg-red-50 rounded-lg p-4">
-                    <h3 class="text-lg font-semibold text-red-600 mb-4 text-center">答錯題目複習</h3>
-                    <div id="wrongAnswersList" class="space-y-3 max-h-96 overflow-y-auto">
+                <!-- Bottom/Right Side - Wrong Answers Review -->
+                <div class="w-full md:w-2/3 bg-red-50 rounded-lg p-3 md:p-4 flex flex-col">
+                    <h3 class="text-base md:text-lg font-semibold text-red-600 mb-3 text-center shrink-0">答錯題目複習</h3>
+                    <div id="wrongAnswersList" class="space-y-2 md:space-y-3 max-h-60 md:max-h-96 overflow-y-auto flex-grow">
                         <!-- Wrong answers will be populated here -->
                     </div>
-                    <div id="noWrongAnswers" class="hidden text-center text-green-600 font-medium py-8">
+                    <div id="noWrongAnswers" class="hidden text-center text-green-600 font-medium py-8 m-auto">
                         🎉 太棒了！全部答對！
                     </div>
                 </div>
             </div>
             
             <!-- Action Buttons -->
-            <div class="flex gap-4">
-                <button id="playAgainBtn" class="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+            <div class="flex flex-col sm:flex-row gap-3 md:gap-4 shrink-0">
+                <button id="playAgainBtn" class="flex-1 py-3 md:py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors shadow-md text-base md:text-lg">
                     重新挑戰
                 </button>
-                <button id="adjustModeBtn" class="flex-1 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+                <button id="adjustModeBtn" class="flex-1 py-3 md:py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors shadow-md text-base md:text-lg">
                     調整模式
                 </button>
             </div>
@@ -590,14 +503,14 @@
             questionCount: 0,
             currentQuestion: null,
             history: [],
-            recentQuestions: [], // Track recent questions to avoid duplicates
+            recentQuestions: [], 
             startTime: null,
             questionStartTime: null,
             timerInterval: null,
             activeInput: null,
-            isTransitioning: false, // 防止動畫期間多重點擊
-            lastChoice: null, // 記錄上一次的選擇
-            consecutiveChoiceCount: 0 // 記錄連續選擇相同選項的次數
+            isTransitioning: false, // 鎖定狀態：過場動畫中防止連點
+            lastChoice: null, // 記錄上一次的選擇 (防狂點)
+            consecutiveChoiceCount: 0 // 記錄連續點擊相同選項的次數
         };
 
         // Math utilities
@@ -648,11 +561,9 @@
                 }
             });
             
-            // Add original fraction numbers
             numbers.add(question.numerator);
             numbers.add(question.denominator);
             
-            // Add some distractor numbers (close to correct answers)
             const distractors = [
                 question.simplestNumerator + 1,
                 question.simplestNumerator - 1,
@@ -681,12 +592,10 @@
                 }
             }
             
-            // Limit to 10 and keep sorted order
             numberArray = numberArray.slice(0, 10).sort((a, b) => a - b);
             return numberArray;
         }
 
-        // Question generation
         function generateQuestion(difficulty, mode) {
             const difficultySettings = {
                 easy: { maxDenom: 20, simplifiableRatio: 0.5, commonFactors: [2, 3, 4, 5, 6] },
@@ -828,15 +737,15 @@
             renderQuestion();
         }
 
-        // Answer submission
+        // Answer submission with penalty system
         function submitJudge(isSimplestChosen) {
             if (gameState.status !== 'running' || gameState.isTransitioning) return;
             
-            gameState.isTransitioning = true; // 鎖定狀態，防止連點
+            gameState.isTransitioning = true; // 鎖定：防止動畫期間再次點擊
             
             const timeSpent = Date.now() - gameState.questionStartTime;
             
-            // 追蹤連續選擇相同選項
+            // 【防狂點機制】記錄連續選擇相同選項
             if (gameState.lastChoice === isSimplestChosen) {
                 gameState.consecutiveChoiceCount++;
             } else {
@@ -844,27 +753,28 @@
                 gameState.consecutiveChoiceCount = 1;
             }
 
-            const isSpamming = gameState.consecutiveChoiceCount >= 4; // 連續 4 次選同一個選項
+            const isSpamming = gameState.consecutiveChoiceCount >= 4; // 連續4次選相同選項
             const correct = isSimplestChosen === gameState.currentQuestion.isSimplest;
             
             recordAnswer(isSimplestChosen ? '是最簡' : '不是最簡', correct, timeSpent);
             
-            let delay = 500;
+            let delay = 500; // 預設答對只需 0.5 秒換題
 
             if (isSpamming) {
-                // 觸發防狂點相同選項機制
+                // 觸發防狂點懲罰
                 gameState.consecutiveChoiceCount = 0; // 重置計數
-                gameState.score = Math.max(0, gameState.score - 1); // 瞎猜扣分
+                gameState.score = Math.max(0, gameState.score - 1); // 瞎猜扣1分
                 gameState.streak = 0;
                 clearStreakEffect();
                 
-                showSpamWarningMessage(); // 顯示專屬警告
-                showAnswerFeedback(false); // 強制紅底
+                showSpamWarningMessage(); // 顯示紅色警告遮罩
+                showAnswerFeedback(false); // 卡片變紅
                 delay = 2000; // 強制鎖定 2 秒
             } else {
                 updateScore(correct);
                 showAnswerFeedback(correct);
-                delay = correct ? 500 : 2000; // 答對0.5秒，答錯2秒
+                // 答對換題快 (0.5s)；答錯懲罰鎖定久 (2s)
+                delay = correct ? 500 : 2000; 
             }
             
             setTimeout(() => {
@@ -903,13 +813,13 @@
                 updateScore(correct);
                 showAnswerFeedback(correct);
                 
-                delay = correct ? 500 : 2000; // 化簡題同樣套用：答對0.5秒，答錯2秒
+                delay = correct ? 500 : 2000; // 答對0.5秒，答錯2秒冷卻
             } else {
                 const timeSpent = Date.now() - gameState.questionStartTime;
                 recordAnswer('跳過', false, timeSpent, true);
                 updateScoreForSkip();
                 showSkipFeedback();
-                delay = 500;
+                delay = 500; // 跳過通常是主動放棄，不給予過長懲罰鎖定
             }
             
             setTimeout(() => {
@@ -943,7 +853,7 @@
                 
                 showStreakEffect();
             } else {
-                // 精準扣分：答錯扣1分，最低0分
+                // 答錯精準扣分機制：扣 1 分，最低 0 分
                 gameState.score = Math.max(0, gameState.score - 1);
                 gameState.streak = 0;
                 clearStreakEffect();
@@ -958,30 +868,29 @@
         
         function showStreakEffect() {
             const questionCard = document.querySelector('#questionCard > div');
-            
             questionCard.classList.remove('streak-3', 'streak-5', 'streak-7', 'streak-10', 'streak-15', 'streak-20', 'streak-25', 'streak-effect');
             
             if (gameState.streak >= 25) {
                 questionCard.classList.add('streak-25');
-                showStreakMessage('🌟 傳說級連擊！', 'text-3xl font-bold text-purple-500');
+                showStreakMessage('🌟 傳說級連擊！', 'text-2xl md:text-3xl font-bold text-purple-500');
             } else if (gameState.streak >= 20) {
                 questionCard.classList.add('streak-20');
-                showStreakMessage('💎 鑽石連擊！', 'text-3xl font-bold text-blue-500');
+                showStreakMessage('💎 鑽石連擊！', 'text-2xl md:text-3xl font-bold text-blue-500');
             } else if (gameState.streak >= 15) {
                 questionCard.classList.add('streak-15');
-                showStreakMessage('💖 粉鑽連擊！', 'text-2xl font-bold text-pink-500');
+                showStreakMessage('💖 粉鑽連擊！', 'text-xl md:text-2xl font-bold text-pink-500');
             } else if (gameState.streak >= 10) {
                 questionCard.classList.add('streak-10');
-                showStreakMessage('🔥 火熱連擊！', 'text-2xl font-bold text-red-400');
+                showStreakMessage('🔥 火熱連擊！', 'text-xl md:text-2xl font-bold text-red-400');
             } else if (gameState.streak >= 7) {
                 questionCard.classList.add('streak-7');
-                showStreakMessage('💜 紫光連擊！', 'text-2xl font-bold text-purple-400');
+                showStreakMessage('💜 紫光連擊！', 'text-xl md:text-2xl font-bold text-purple-400');
             } else if (gameState.streak >= 5) {
                 questionCard.classList.add('streak-5');
-                showStreakMessage('⚡ 連擊中！', 'text-xl font-bold text-orange-400');
+                showStreakMessage('⚡ 連擊中！', 'text-lg md:text-xl font-bold text-orange-400');
             } else if (gameState.streak >= 3) {
                 questionCard.classList.add('streak-3', 'streak-effect');
-                showStreakMessage('✨ 好手感！', 'text-xl font-bold text-yellow-500');
+                showStreakMessage('✨ 好手感！', 'text-lg md:text-xl font-bold text-yellow-500');
             }
         }
         
@@ -1007,13 +916,12 @@
             }, 2000);
         }
 
-        // UI Updates
         function renderQuestion() {
             const q = gameState.currentQuestion;
             document.getElementById('numerator').textContent = q.numerator;
             document.getElementById('denominator').textContent = q.denominator;
             
-            // Reset question card background
+            // Reset question card background (純視覺回饋)
             const questionCard = document.querySelector('#questionCard > div');
             questionCard.classList.remove('bg-green-100', 'bg-red-100', 'bg-yellow-100');
             questionCard.classList.add('bg-white');
@@ -1036,8 +944,10 @@
                 const denomBox = document.getElementById('dropDenominator');
                 numBox.textContent = '?';
                 denomBox.textContent = '?';
-                numBox.className = 'w-20 h-12 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mb-1 mx-auto';
-                denomBox.className = 'w-20 h-12 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mx-auto';
+                
+                // RWD 類別調整
+                numBox.className = 'w-16 h-10 md:w-20 md:h-14 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-xl md:text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mb-1 mx-auto';
+                denomBox.className = 'w-16 h-10 md:w-20 md:h-14 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-xl md:text-2xl font-bold text-gray-400 bg-gray-50 drop-zone mx-auto';
                 
                 const numbers = generateDraggableNumbers(q);
                 renderDraggableNumbers(numbers);
@@ -1081,17 +991,17 @@
             questionCard.classList.remove('bg-white', 'bg-green-100', 'bg-red-100');
             questionCard.classList.add('bg-yellow-100');
         }
-        
+
         function showSpamWarningMessage() {
             const existingMessage = document.querySelector('.warning-overlay');
             if (existingMessage) existingMessage.remove();
             
             const message = document.createElement('div');
-            message.className = 'warning-overlay absolute inset-0 flex flex-col items-center justify-center bg-red-800 bg-opacity-95 text-white z-50 rounded-xl';
+            message.className = 'warning-overlay absolute inset-0 flex flex-col items-center justify-center bg-red-800 bg-opacity-95 text-white z-50 rounded-xl px-4 text-center';
             message.innerHTML = `
-                <div class="text-6xl mb-4">🚫</div>
-                <div class="text-3xl font-bold mb-2 tracking-widest">請勿亂猜！</div>
-                <div class="text-lg opacity-90">強制進入 2 秒鐘的紅色警告</div>
+                <div class="text-5xl md:text-6xl mb-3 md:mb-4">🚫</div>
+                <div class="text-xl md:text-3xl font-bold mb-2 tracking-wider">請勿亂猜！</div>
+                <div class="text-sm md:text-lg opacity-90">強制進入 2 秒鐘的紅色警告</div>
             `;
             
             const questionCard = document.querySelector('#questionCard > div');
@@ -1110,7 +1020,7 @@
             
             numbers.forEach(number => {
                 const div = document.createElement('div');
-                div.className = 'draggable-number bg-blue-100 hover:bg-blue-200 text-lg font-semibold py-2 rounded-lg text-center border-2 border-blue-300 transition-colors';
+                div.className = 'draggable-number bg-blue-100 hover:bg-blue-200 text-base md:text-lg font-semibold py-2 rounded-lg text-center border-2 border-blue-300 transition-colors shadow-sm';
                 div.dataset.number = number;
                 div.textContent = number;
                 
@@ -1267,29 +1177,13 @@
             
             const messageTemplates = {
                 mainMessages: {
-                    mvp: '連擊王',
-                    accurate: '正確率超穩',
-                    fast: '反應超快',
-                    balanced: '表現均衡',
-                    persistent: '練習量充足',
-                    beginner: '好開始'
+                    mvp: '連擊王', accurate: '正確率超穩', fast: '反應超快',
+                    balanced: '表現均衡', persistent: '練習量充足', beginner: '好開始'
                 },
                 suggestions: {
-                    accuracy: {
-                        low: '先試2、3、5整除',
-                        medium: '約到不能約才確定',
-                        high: '保持觀察順序'
-                    },
-                    time: {
-                        slow: '固定檢查2、3、5順序',
-                        medium: '先掃簡單因數',
-                        fast: '保留0.5秒檢查'
-                    },
-                    count: {
-                        low: '挑能秒殺的類型',
-                        medium: '每題多給1秒流程',
-                        high: '專注正確率'
-                    }
+                    accuracy: { low: '先試2、3、5整除', medium: '約到不能約才確定', high: '保持觀察順序' },
+                    time: { slow: '固定檢查2、3、5順序', medium: '先掃簡單因數', fast: '保留0.5秒檢查' },
+                    count: { low: '挑能秒殺的類型', medium: '每題多給1秒流程', high: '專注正確率' }
                 },
                 encouragements: [
                     '你對『最簡分數』已經非常了解了，超棒！',
@@ -1327,7 +1221,7 @@
             else colorClass = 'text-indigo-700 bg-indigo-100';
             
             messageElement.textContent = finalMessage;
-            messageElement.className = `text-sm font-medium mt-2 px-3 py-2 rounded-lg ${colorClass}`;
+            messageElement.className = `text-xs md:text-sm font-medium mt-2 px-3 py-2 rounded-lg ${colorClass}`;
         }
 
         function displayWrongAnswers(history) {
@@ -1349,9 +1243,9 @@
                 const div = document.createElement('div');
                 
                 if (answer.isSkipped) {
-                    div.className = 'bg-yellow-50 border border-yellow-200 rounded-lg p-3';
+                    div.className = 'bg-yellow-50 border border-yellow-200 rounded-lg p-2 md:p-3 shadow-sm';
                 } else {
-                    div.className = 'bg-red-50 border border-red-200 rounded-lg p-3';
+                    div.className = 'bg-red-50 border border-red-200 rounded-lg p-2 md:p-3 shadow-sm';
                 }
                 
                 const questionText = `第${answer.questionNumber}題：${answer.numerator}/${answer.denominator}`;
@@ -1377,10 +1271,10 @@
                 const answerColor = answer.isSkipped ? 'text-yellow-600' : 'text-red-600';
                 
                 div.innerHTML = `
-                    <div class="font-medium ${titleColor} mb-1">${questionText}</div>
-                    <div class="text-sm ${answerColor} mb-1">${userAnswerText}</div>
-                    <div class="text-sm text-green-600 mb-2">${correctAnswerText}</div>
-                    <div class="text-xs text-gray-600 bg-white p-2 rounded border-l-4 border-blue-400">
+                    <div class="font-medium text-sm md:text-base ${titleColor} mb-1">${questionText}</div>
+                    <div class="text-xs md:text-sm ${answerColor} mb-1">${userAnswerText}</div>
+                    <div class="text-xs md:text-sm text-green-600 mb-2">${correctAnswerText}</div>
+                    <div class="text-xs text-gray-600 bg-white p-2 rounded border-l-[3px] border-blue-400">
                         <strong>解析：</strong>${explanationText}
                     </div>
                 `;
@@ -1389,7 +1283,6 @@
             });
         }
 
-        // Event Listeners
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('judgeMode').addEventListener('click', function() {
                 gameState.mode = 'judge';
